@@ -1,0 +1,5 @@
+#pragma once
+#include <coretypes/common.h>
+
+#define BEGIN_NAMESPACE_PLAYER_MODULE BEGIN_NAMESPACE_OPENDAQ_MODULE(player_module)
+#define END_NAMESPACE_PLAYER_MODULE END_NAMESPACE_OPENDAQ_MODULE

@@ -1,0 +1,17 @@
+# Build directories
+build/
+build-vs/
+out/
+cmake-build-*/
+
+# vcpkg (local clone, bootstrapped by the developer)
+external/vcpkg/
+vcpkg_installed/
+
+# Game cores are shipped separately (see tools/fetch_mrboom.ps1)
+cores/
+
+# IDE
+.vs/
+.vscode/
+.idea/

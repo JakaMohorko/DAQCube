@@ -1,0 +1,14 @@
+{
+  "name": "opendaq-game-engine",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "sdl2",
+    {
+      "name": "ffmpeg",
+      "default-features": false,
+      "features": ["avcodec", "swscale", "vpx"]
+    },
+    "miniaudio",
+    "gtest"
+  ]
+}

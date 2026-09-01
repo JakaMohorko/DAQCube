@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 25, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "vs2026",
+      "displayName": "Visual Studio 2026 (x64)",
+      "description": "Generates OpenDAQGameEngine.sln in build-vs/ (requires CMake >= 4.x, e.g. the VS-bundled one)",
+      "generator": "Visual Studio 18 2026",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-vs",
+      "cacheVariables": {
+        "DAQ_GAME_RELEASE_WARNINGS_AS_ERRORS": "OFF"
+      }
+    },
+    {
+      "name": "ninja-release",
+      "displayName": "Ninja Release (CLI, run from a vcvars64 environment)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "DAQ_GAME_RELEASE_WARNINGS_AS_ERRORS": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "vs2026", "configurePreset": "vs2026", "configuration": "Release" },
+    { "name": "ninja-release", "configurePreset": "ninja-release" }
+  ],
+  "testPresets": [
+    { "name": "vs2026", "configurePreset": "vs2026", "configuration": "Release", "output": { "outputOnFailure": true } },
+    { "name": "ninja-release", "configurePreset": "ninja-release", "output": { "outputOnFailure": true } }
+  ]
+}

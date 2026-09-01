@@ -1,0 +1,5 @@
+#pragma once
+#include <coretypes/common.h>
+
+#define BEGIN_NAMESPACE_DAQCUBE_MODULE BEGIN_NAMESPACE_OPENDAQ_MODULE(daqcube_module)
+#define END_NAMESPACE_DAQCUBE_MODULE END_NAMESPACE_OPENDAQ_MODULE
