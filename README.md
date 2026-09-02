@@ -1,6 +1,14 @@
-# OpenDAQ Game Engine
+# DAQCube
 
-Multiplayer game sessions over openDAQ. Two modules:
+Multiplayer game sessions over openDAQ. 
+
+Developed as part of a "DAQ Jam" event at openDAQ - goal was to implement an openDAQ-based application. 
+
+> Disclaimer: The design and architecture are my own; the implementation was written with the help of agentic AI (Claude Code).
+
+## Contents
+
+Contains two modules:
 
 - **Player** - client module with two component types:
   - the **Player FB**: a single SDL2 window that replays the game video
